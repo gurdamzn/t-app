@@ -9,15 +9,15 @@ class Config:
     SQLALCHEMY_RECORD_QUERIES = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     # run mailhog for development emails
-    MAIL_SERVER = os.environ.get('SERVER') or 'localhost'
+    MAIL_SERVER = os.environ.get('0.0.0.0') or '0.0.0.0'
     MAIL_PORT = os.environ.get('MAIL_PORT') or 1025
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') or False
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME') or 'mailhog'
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD') or 'mailhog'
     CIRCULATE_MAIL_SUBJECT_PREFIX = '[Circulate]'
     CIRCULATE_MAIL_SENDER = os.environ.get('CIRCULATE_MAIL_SENDER') or \
-        'Circulate Admin <circulate@example.com>'
-    CIRCULATE_ADMIN = os.environ.get('CIRCULATE_ADMIN') or 'circulate@example.com'
+        'Circulate Admin <t-app@example.com>'
+    CIRCULATE_ADMIN = os.environ.get('CIRCULATE_ADMIN') or 't-app@example.com'
     CIRCULATE_POSTS_PER_PAGE = 20
     CIRCULATE_FOLLOWERS_PER_PAGE = 50
     CIRCULATE_COMMENTS_PER_PAGE = 30
